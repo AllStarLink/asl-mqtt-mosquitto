@@ -1,2 +1,3 @@
-# asl-mqtt-mosquitto
-Mosquito MQTT Broker
+# Mosquito MQTT Broker
+
+MQTT Broker for developing asl-mqtt or running a local broker.
