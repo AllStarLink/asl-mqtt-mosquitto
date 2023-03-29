@@ -1,0 +1,23 @@
+version: '2.0'
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2
+    volumes:
+      - ./config/:/mosquitto/config/
+      #- ./log/:/mosquitto/log/
+      - /var/log/mosquitto/:/mosquitto/log/
+      - data:/mosquitto/data/
+    networks:
+      - net
+    ports:
+      - 1883:1883
+      - 9001:9001
+
+volumes:
+  data: ~
+
+networks:
+   net:
+      driver: bridge
+
